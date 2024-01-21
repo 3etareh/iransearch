@@ -1,0 +1,4 @@
+baseURL = 'https://iransearch.org/'
+languageCode = 'fa'
+title = 'Iran Search'
+theme = 'PaperMod'
