@@ -19,14 +19,14 @@ def search(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(results)
 
 def search_books(query: str) -> str:
-    # Implement your search logic here
-    content = "This is a sample book content. Replace it with actual content."
-    lines = content.split('\n')
-    results = [line for line in lines if query.lower() in line.lower()]
-    if results:
-        return '\n'.join(results[:5])  # Return top 5 results
-    else:
-        return "No results found."
+    with open('AmericaHeldHostage.txt', 'r') as file:
+        content = file.read()
+        lines = content.split('\n')
+        results = [line for line in lines if query.lower() in line.lower()]
+        if results:
+            return '\n'.join(results[:5])  # Return top 5 results
+        else:
+            return "No results found."
 
 def main() -> None:
     # Get the token from environment variables
