@@ -19,7 +19,7 @@ def search(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(results)
 
 def search_books(query: str) -> str:
-    with open('/AmericaHeldHostage.txt', 'r') as file:
+    with open('/books.txt', 'r') as file:
         content = file.read()
         lines = content.split('\n')
         results = [line for line in lines if query.lower() in line.lower()]
